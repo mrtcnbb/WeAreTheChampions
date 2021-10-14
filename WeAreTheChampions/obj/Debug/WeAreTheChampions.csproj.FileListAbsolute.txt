@@ -1,0 +1,15 @@
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\bin\Debug\WeAreTheChampions.exe.config
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\bin\Debug\WeAreTheChampions.exe
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\bin\Debug\WeAreTheChampions.pdb
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\bin\Debug\EntityFramework.dll
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\bin\Debug\EntityFramework.xml
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.csproj.AssemblyReference.cache
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.Properties.Resources.resources
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.csproj.GenerateResource.cache
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.csproj.CoreCompileInputs.cache
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.csproj.CopyComplete
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.exe
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.pdb
+C:\Users\w10\source\repos\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.Migrations.Initial.resources
