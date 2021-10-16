@@ -29,3 +29,7 @@ C:\Users\w10\Desktop\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChamp
 C:\Users\w10\Desktop\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.exe
 C:\Users\w10\Desktop\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.pdb
 C:\Users\w10\Desktop\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.Form1.resources
+C:\Users\w10\Desktop\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.Colors.resources
+C:\Users\w10\Desktop\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.New_Match.resources
+C:\Users\w10\Desktop\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.Players.resources
+C:\Users\w10\Desktop\WeAreTheChampions\WeAreTheChampions\obj\Debug\WeAreTheChampions.Teams.resources
