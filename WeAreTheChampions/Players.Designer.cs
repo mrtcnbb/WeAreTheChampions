@@ -40,8 +40,8 @@ namespace WeAreTheChampions
             this.cboTeams = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvPlayer = new System.Windows.Forms.DataGridView();
-            this.PlayerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTeamsFilter = new System.Windows.Forms.DataGridView();
+            this.PlayerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -65,7 +65,6 @@ namespace WeAreTheChampions
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "New Player";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnDelete
             // 
@@ -75,6 +74,7 @@ namespace WeAreTheChampions
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete Player";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -84,15 +84,18 @@ namespace WeAreTheChampions
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cboPlayerTeams
             // 
+            this.cboPlayerTeams.DisplayMember = "TeamName";
             this.cboPlayerTeams.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPlayerTeams.FormattingEnabled = true;
             this.cboPlayerTeams.Location = new System.Drawing.Point(147, 92);
             this.cboPlayerTeams.Name = "cboPlayerTeams";
             this.cboPlayerTeams.Size = new System.Drawing.Size(213, 24);
             this.cboPlayerTeams.TabIndex = 3;
+            this.cboPlayerTeams.ValueMember = "Id";
             // 
             // txtPlayerName
             // 
@@ -134,11 +137,15 @@ namespace WeAreTheChampions
             // 
             // cboTeams
             // 
+            this.cboTeams.DisplayMember = "TeamName";
+            this.cboTeams.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTeams.FormattingEnabled = true;
             this.cboTeams.Location = new System.Drawing.Point(120, 50);
             this.cboTeams.Name = "cboTeams";
             this.cboTeams.Size = new System.Drawing.Size(214, 24);
             this.cboTeams.TabIndex = 1;
+            this.cboTeams.ValueMember = "Id";
+            this.cboTeams.SelectedIndexChanged += new System.EventHandler(this.cboTeams_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -169,13 +176,6 @@ namespace WeAreTheChampions
             this.dgvPlayer.Size = new System.Drawing.Size(450, 230);
             this.dgvPlayer.TabIndex = 2;
             // 
-            // PlayerName
-            // 
-            this.PlayerName.HeaderText = "Player Name";
-            this.PlayerName.MinimumWidth = 6;
-            this.PlayerName.Name = "PlayerName";
-            this.PlayerName.ReadOnly = true;
-            // 
             // dgvTeamsFilter
             // 
             this.dgvTeamsFilter.AllowUserToAddRows = false;
@@ -196,8 +196,17 @@ namespace WeAreTheChampions
             this.dgvTeamsFilter.Size = new System.Drawing.Size(450, 217);
             this.dgvTeamsFilter.TabIndex = 3;
             // 
+            // PlayerName
+            // 
+            this.PlayerName.DataPropertyName = "PlayerName";
+            this.PlayerName.HeaderText = "Player Name";
+            this.PlayerName.MinimumWidth = 6;
+            this.PlayerName.Name = "PlayerName";
+            this.PlayerName.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn1
             // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PlayerName";
             this.dataGridViewTextBoxColumn1.HeaderText = "Team Player Name";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -218,6 +227,7 @@ namespace WeAreTheChampions
             this.Name = "Players";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Players";
+            this.Load += new System.EventHandler(this.Players_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -241,8 +251,8 @@ namespace WeAreTheChampions
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboTeams;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PlayerName;
         private System.Windows.Forms.DataGridView dgvTeamsFilter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PlayerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }

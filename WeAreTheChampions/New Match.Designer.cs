@@ -61,7 +61,7 @@ namespace WeAreTheChampions
             // 
             // dtpDate
             // 
-            this.dtpDate.CustomFormat = "ddMMMMyyyy | hh:mm";
+            this.dtpDate.CustomFormat = "ddMMMMyyyy | HH:mm";
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDate.Location = new System.Drawing.Point(301, 121);
             this.dtpDate.Name = "dtpDate";

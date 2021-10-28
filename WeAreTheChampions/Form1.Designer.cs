@@ -59,18 +59,21 @@ namespace WeAreTheChampions
             this.tsmiTeams.Name = "tsmiTeams";
             this.tsmiTeams.Size = new System.Drawing.Size(65, 24);
             this.tsmiTeams.Text = "Teams";
+            this.tsmiTeams.Click += new System.EventHandler(this.tsmiTeams_Click);
             // 
             // tsmiColors
             // 
             this.tsmiColors.Name = "tsmiColors";
             this.tsmiColors.Size = new System.Drawing.Size(65, 24);
             this.tsmiColors.Text = "Colors";
+            this.tsmiColors.Click += new System.EventHandler(this.tsmiColors_Click);
             // 
             // tsmiPlayers
             // 
             this.tsmiPlayers.Name = "tsmiPlayers";
             this.tsmiPlayers.Size = new System.Drawing.Size(69, 24);
             this.tsmiPlayers.Text = "Players";
+            this.tsmiPlayers.Click += new System.EventHandler(this.tsmiPlayers_Click);
             // 
             // dgvMatches
             // 
@@ -133,6 +136,7 @@ namespace WeAreTheChampions
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WeAreTheChampions 1.0";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tsmi.ResumeLayout(false);
             this.tsmi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatches)).EndInit();
