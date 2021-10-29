@@ -37,6 +37,12 @@ namespace WeAreTheChampions
             this.btnNewMatch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.chkDisableMatch = new System.Windows.Forms.CheckBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tsmi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatches)).BeginInit();
             this.SuspendLayout();
@@ -77,16 +83,29 @@ namespace WeAreTheChampions
             // 
             // dgvMatches
             // 
+            this.dgvMatches.AllowUserToAddRows = false;
+            this.dgvMatches.AllowUserToDeleteRows = false;
             this.dgvMatches.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMatches.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMatches.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvMatches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMatches.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dgvMatches.Location = new System.Drawing.Point(12, 100);
             this.dgvMatches.Name = "dgvMatches";
+            this.dgvMatches.ReadOnly = true;
             this.dgvMatches.RowHeadersWidth = 51;
             this.dgvMatches.RowTemplate.Height = 24;
+            this.dgvMatches.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMatches.Size = new System.Drawing.Size(723, 271);
             this.dgvMatches.TabIndex = 1;
+            this.dgvMatches.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMatches_CellContentClick);
             // 
             // btnNewMatch
             // 
@@ -97,6 +116,7 @@ namespace WeAreTheChampions
             this.btnNewMatch.TabIndex = 2;
             this.btnNewMatch.Text = "New Match";
             this.btnNewMatch.UseVisualStyleBackColor = true;
+            this.btnNewMatch.Click += new System.EventHandler(this.btnNewMatch_Click);
             // 
             // btnDelete
             // 
@@ -107,6 +127,7 @@ namespace WeAreTheChampions
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -117,12 +138,65 @@ namespace WeAreTheChampions
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // chkDisableMatch
+            // 
+            this.chkDisableMatch.AutoSize = true;
+            this.chkDisableMatch.Location = new System.Drawing.Point(566, 392);
+            this.chkDisableMatch.Name = "chkDisableMatch";
+            this.chkDisableMatch.Size = new System.Drawing.Size(169, 22);
+            this.chkDisableMatch.TabIndex = 5;
+            this.chkDisableMatch.Text = "Hide Played Matches";
+            this.chkDisableMatch.UseVisualStyleBackColor = true;
+            this.chkDisableMatch.CheckedChanged += new System.EventHandler(this.chkDisableMatch_CheckedChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "HomeTeam";
+            this.Column1.HeaderText = "Home Team";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "AwayTeam";
+            this.Column2.HeaderText = "Away Team";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "MatchDateText";
+            this.Column3.HeaderText = "Date";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "MatchHourText";
+            this.Column4.HeaderText = "Hour";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Scores";
+            this.Column5.HeaderText = "Score";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(744, 433);
+            this.Controls.Add(this.chkDisableMatch);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnNewMatch);
@@ -155,6 +229,12 @@ namespace WeAreTheChampions
         private System.Windows.Forms.Button btnNewMatch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.CheckBox chkDisableMatch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
 

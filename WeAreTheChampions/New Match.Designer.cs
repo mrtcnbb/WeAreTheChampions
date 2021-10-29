@@ -37,7 +37,7 @@ namespace WeAreTheChampions
             this.label3 = new System.Windows.Forms.Label();
             this.nudHomeTeamScore = new System.Windows.Forms.NumericUpDown();
             this.nudAwayTeamScore = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblMatchScore = new System.Windows.Forms.Label();
             this.btnAddMatch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudHomeTeamScore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAwayTeamScore)).BeginInit();
@@ -45,19 +45,26 @@ namespace WeAreTheChampions
             // 
             // cboHomeTeams
             // 
+            this.cboHomeTeams.DisplayMember = "TeamName";
+            this.cboHomeTeams.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboHomeTeams.FormattingEnabled = true;
             this.cboHomeTeams.Location = new System.Drawing.Point(12, 121);
             this.cboHomeTeams.Name = "cboHomeTeams";
             this.cboHomeTeams.Size = new System.Drawing.Size(181, 24);
             this.cboHomeTeams.TabIndex = 0;
+            this.cboHomeTeams.ValueMember = "Id";
+            this.cboHomeTeams.SelectedIndexChanged += new System.EventHandler(this.cboHomeTeams_SelectedIndexChanged);
             // 
             // cboAwayTeams
             // 
+            this.cboAwayTeams.DisplayMember = "TeamName";
+            this.cboAwayTeams.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAwayTeams.FormattingEnabled = true;
             this.cboAwayTeams.Location = new System.Drawing.Point(592, 121);
             this.cboAwayTeams.Name = "cboAwayTeams";
             this.cboAwayTeams.Size = new System.Drawing.Size(196, 24);
             this.cboAwayTeams.TabIndex = 1;
+            this.cboAwayTeams.ValueMember = "Id";
             // 
             // dtpDate
             // 
@@ -109,14 +116,14 @@ namespace WeAreTheChampions
             this.nudAwayTeamScore.Size = new System.Drawing.Size(70, 22);
             this.nudAwayTeamScore.TabIndex = 7;
             // 
-            // label4
+            // lblMatchScore
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(366, 182);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 17);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Match Score";
+            this.lblMatchScore.AutoSize = true;
+            this.lblMatchScore.Location = new System.Drawing.Point(366, 182);
+            this.lblMatchScore.Name = "lblMatchScore";
+            this.lblMatchScore.Size = new System.Drawing.Size(87, 17);
+            this.lblMatchScore.TabIndex = 8;
+            this.lblMatchScore.Text = "Match Score";
             // 
             // btnAddMatch
             // 
@@ -126,6 +133,7 @@ namespace WeAreTheChampions
             this.btnAddMatch.TabIndex = 9;
             this.btnAddMatch.Text = "Match Add";
             this.btnAddMatch.UseVisualStyleBackColor = true;
+            this.btnAddMatch.Click += new System.EventHandler(this.btnAddMatch_Click);
             // 
             // New_Match
             // 
@@ -133,7 +141,7 @@ namespace WeAreTheChampions
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAddMatch);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblMatchScore);
             this.Controls.Add(this.nudAwayTeamScore);
             this.Controls.Add(this.nudHomeTeamScore);
             this.Controls.Add(this.label3);
@@ -165,7 +173,7 @@ namespace WeAreTheChampions
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nudHomeTeamScore;
         private System.Windows.Forms.NumericUpDown nudAwayTeamScore;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblMatchScore;
         private System.Windows.Forms.Button btnAddMatch;
     }
 }

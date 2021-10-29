@@ -75,8 +75,10 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Color.cs" />
     <Compile Include="Models\Match.cs" />
+    <Compile Include="Models\NewUpdateMatchModel.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Result.cs" />
+    <Compile Include="Models\States.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\WeAreTheChampionsDbContext.cs" />
     <Compile Include="New Match.cs">

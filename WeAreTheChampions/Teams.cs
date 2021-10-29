@@ -59,14 +59,15 @@ namespace WeAreTheChampions
             if (dgvTeams.SelectedRows.Count != 1)
                 return;
 
-            var selectedTeam = (Models.Team)dgvTeams.SelectedRows[0].DataBoundItem;
+            var selectedTeam = ((Models.Team)dgvTeams.SelectedRows[0].DataBoundItem).Id;
+            var delete = db.Teams.Where(x => x.Id == selectedTeam).FirstOrDefault();
             if(dgvTeams.Rows.Count > -1)
             {
                 DialogResult dialog = new DialogResult();
                 dialog = MessageBox.Show("Seçilen veri silinsin mi?", "Emin misin?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if(dialog == DialogResult.Yes)
                 {
-                    db.Teams.Remove(selectedTeam);
+                    db.Teams.Remove(delete);
                     db.SaveChanges();
                     TeamList();
                 }

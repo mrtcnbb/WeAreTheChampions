@@ -28,5 +28,10 @@ namespace WeAreTheChampions.Models
         public virtual ICollection<Match> AwayMatches { get; set; }
         public virtual ICollection<Match> HomeMatches { get; set; }
 
+        public override string ToString()
+        {
+            return TeamName;
+        }
+
     }
 }
